@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azahell Huge Fund - Global Investment Excellence</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Azahell Huge Fund</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="markets.html">Markets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html" class="btn-nav">Sign In</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="animated-icons">
+            <div class="float-icon" style="top: 15%; left: 10%;">
+                <i class="fas fa-chart-line" style="color: #00C853; font-size: 3rem;"></i>
+            </div>
+            <div class="float-icon" style="top: 25%; right: 15%;">
+                <i class="fas fa-arrow-trend-up" style="color: #FFD700; font-size: 2.5rem;"></i>
+            </div>
+            <div class="float-icon" style="bottom: 20%; left: 15%;">
+                <i class="fas fa-rocket" style="color: #FFA500; font-size: 2.8rem;"></i>
+            </div>
+            <div class="float-icon" style="top: 40%; right: 10%;">
+                <i class="fas fa-coins" style="color: #FFD700; font-size: 2.5rem;"></i>
+            </div>
+            <div class="float-icon" style="bottom: 30%; right: 20%;">
+                <i class="fas fa-dollar-sign" style="color: #00C853; font-size: 3rem;"></i>
+            </div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Global Capital Growth Through Smart Investment Strategies</h1>
+            <p class="hero-subtitle">Building wealth through disciplined portfolio management and strategic asset allocation</p>
+            <div class="hero-buttons">
+                <a href="signin.html" class="btn btn-primary">Start Investing</a>
+                <a href="analytics.html" class="btn btn-secondary">View Analytics</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signin Modal Popup -->
+    <div class="modal" id="signinModal">
+        <div class="modal-content signin-modal-content">
+            <span class="close-modal" id="closeSigninModal">&times;</span>
+            <div class="signin-header">
+                <h2>Welcome to Azahell Huge Fund</h2>
+                <p>Sign in to access exclusive investment opportunities</p>
+            </div>
+            <form id="quickSigninForm" class="signin-form">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPassword">Password</label>
+                    <input type="password" id="modalPassword" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+            </form>
+            <div class="signin-footer">
+                <p>Don't have an account? <a href="signin.html">Create Account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fund Highlights -->
+    <section class="highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card" data-count="2.8">
+                    <div class="highlight-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="counter" data-target="2.8">0</h3>
+                    <p>Billion USD Assets Managed</p>
+                </div>
+                <div class="highlight-card" data-count="15000">
+                    <div class="highlight-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="counter" data-target="15000">0</h3>
+                    <p>Active Investors</p>
+                </div>
+                <div class="highlight-card" data-count="24.5">
+                    <div class="highlight-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="counter" data-target="24.5">0</h3>
+                    <p>Average Annual Growth Rate %</p>
+                </div>
+                <div class="highlight-card" data-count="45">
+                    <div class="highlight-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="counter" data-target="45">0</h3>
+                    <p>Countries Worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Plans -->
+    <section class="plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investment Plans</h2>
+                <p>Choose the plan that aligns with your financial goals</p>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Starter Fund</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">10,000</span>
+                            <span class="period">minimum</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Diversified Portfolio</li>
+                        <li><i class="fas fa-check"></i> Quarterly Reports</li>
+                        <li><i class="fas fa-check"></i> Online Dashboard Access</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                        <li><i class="fas fa-check"></i> 12-18% Target Return</li>
+                    </ul>
+                    <a href="signin.html" class="btn btn-outline">Request Access</a>
+                </div>
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Growth Fund</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">100,000</span>
+                            <span class="period">minimum</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Premium Asset Allocation</li>
+                        <li><i class="fas fa-check"></i> Monthly Reports</li>
+                        <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                        <li><i class="fas fa-check"></i> 20-28% Target Return</li>
+                    </ul>
+                    <a href="signin.html" class="btn btn-primary">Request Access</a>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Institutional Fund</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">1M+</span>
+                            <span class="period">minimum</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Bespoke Investment Strategy</li>
+                        <li><i class="fas fa-check"></i> Real-Time Reporting</li>
+                        <li><i class="fas fa-check"></i> Direct Market Access</li>
+                        <li><i class="fas fa-check"></i> Executive Team Support</li>
+                        <li><i class="fas fa-check"></i> 25-35% Target Return</li>
+                    </ul>
+                    <a href="signin.html" class="btn btn-outline">Request Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Security -->
+    <section class="trust">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trust & Security</h2>
+                <p>Your investments are protected by industry-leading security measures</p>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Blockchain Transparency</h3>
+                    <p>All transactions are recorded on immutable blockchain ledgers, ensuring complete transparency and auditability of fund operations.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Asset Custody</h3>
+                    <p>Assets are held with tier-1 custodians and protected by multi-signature wallets, cold storage, and institutional-grade security protocols.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Regulatory Compliance</h3>
+                    <p>We operate under strict regulatory frameworks and maintain compliance with international financial standards and reporting requirements.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Investor Protection</h3>
+                    <p>Comprehensive insurance coverage and segregated accounts ensure your capital is protected against operational risks and market volatility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Azahell Huge Fund</span>
+                    </div>
+                    <p>Building wealth through disciplined portfolio management and strategic asset allocation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="analytics.html">Analytics</a></li>
+                        <li><a href="markets.html">Markets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Investment Guide</a></li>
+                        <li><a href="#">Market Research</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-user"></i> Engineer Abel Tesfay</li>
+                        <li><i class="fas fa-phone"></i> 0991053717</li>
+                        <li><i class="fas fa-envelope"></i> abeltesfaydm@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Azahell Huge Fund. All rights reserved.</p>
+                <p class="disclaimer">Investments involve risk. Past performance is not a guarantee of future results.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

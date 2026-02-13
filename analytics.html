@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Azahell Huge Fund</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Azahell Huge Fund</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="analytics.html" class="active">Analytics</a></li>
+                <li><a href="markets.html">Markets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html" class="btn-nav">Sign In</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="animated-icons">
+            <div class="float-icon" style="top: 20%; left: 10%;">
+                <i class="fas fa-chart-bar" style="color: #00C853; font-size: 2.5rem;"></i>
+            </div>
+            <div class="float-icon" style="top: 30%; right: 10%;">
+                <i class="fas fa-rocket" style="color: #FFD700; font-size: 2.5rem;"></i>
+            </div>
+            <div class="float-icon" style="bottom: 20%; left: 15%;">
+                <i class="fas fa-arrow-trend-up" style="color: #FFA500; font-size: 2rem;"></i>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Analytics Dashboard</h1>
+            <p>Real-time fund performance and investment metrics</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard">
+        <div class="container">
+            <!-- Key Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="metric-info">
+                        <p class="metric-label">Total Assets</p>
+                        <h3 class="metric-value">$2.8B</h3>
+                        <span class="metric-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-info">
+                        <p class="metric-label">YTD Return</p>
+                        <h3 class="metric-value">24.5%</h3>
+                        <span class="metric-change positive">+3.2%</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-info">
+                        <p class="metric-label">Active Investors</p>
+                        <h3 class="metric-value">15,247</h3>
+                        <span class="metric-change positive">+8.3%</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="metric-info">
+                        <p class="metric-label">Sharpe Ratio</p>
+                        <h3 class="metric-value">2.45</h3>
+                        <span class="metric-change positive">+0.15</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Fund Performance Trend</h3>
+                        <select id="performanceTimeframe" class="chart-select">
+                            <option value="1M">1 Month</option>
+                            <option value="3M">3 Months</option>
+                            <option value="6M" selected>6 Months</option>
+                            <option value="1Y">1 Year</option>
+                            <option value="ALL">All Time</option>
+                        </select>
+                    </div>
+                    <canvas id="performanceChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Monthly Deposits</h3>
+                        <select id="depositsTimeframe" class="chart-select">
+                            <option value="6M" selected>6 Months</option>
+                            <option value="1Y">1 Year</option>
+                        </select>
+                    </div>
+                    <canvas id="depositsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Asset Allocation -->
+            <div class="allocation-section">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Asset Allocation</h3>
+                    </div>
+                    <div class="allocation-grid">
+                        <div class="allocation-chart">
+                            <canvas id="allocationChart"></canvas>
+                        </div>
+                        <div class="allocation-list">
+                            <div class="allocation-item">
+                                <div class="allocation-label">
+                                    <span class="allocation-dot" style="background: #FFD700;"></span>
+                                    <span>Equities</span>
+                                </div>
+                                <span class="allocation-value">45%</span>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-label">
+                                    <span class="allocation-dot" style="background: #FFA500;"></span>
+                                    <span>Fixed Income</span>
+                                </div>
+                                <span class="allocation-value">25%</span>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-label">
+                                    <span class="allocation-dot" style="background: #00C853;"></span>
+                                    <span>Alternatives</span>
+                                </div>
+                                <span class="allocation-value">15%</span>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-label">
+                                    <span class="allocation-dot" style="background: #2196F3;"></span>
+                                    <span>Commodities</span>
+                                </div>
+                                <span class="allocation-value">10%</span>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-label">
+                                    <span class="allocation-dot" style="background: #9C27B0;"></span>
+                                    <span>Cash</span>
+                                </div>
+                                <span class="allocation-value">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Azahell Huge Fund</span>
+                    </div>
+                    <p>Building wealth through disciplined portfolio management and strategic asset allocation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="analytics.html">Analytics</a></li>
+                        <li><a href="markets.html">Markets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Investment Guide</a></li>
+                        <li><a href="#">Market Research</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-user"></i> Engineer Abel Tesfay</li>
+                        <li><i class="fas fa-phone"></i> 0991053717</li>
+                        <li><i class="fas fa-envelope"></i> abeltesfaydm@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Azahell Huge Fund. All rights reserved.</p>
+                <p class="disclaimer">Investments involve risk. Past performance is not a guarantee of future results.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/analytics.js"></script>
+</body>
+</html>
